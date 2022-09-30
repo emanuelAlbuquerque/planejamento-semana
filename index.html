@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>Planejamnto Semanal</title>
+</head>
+
+<body>
+
+  <header id="header">
+    <div class="header__titulo-description">
+      <h1 class="header__titulo">Planejamento Semanal</h1>
+      <p class="header__description">Utilize o formulário para adicionar novas tarefas:</p>
+    </div>
+
+    <div class="header__buttons">
+      <button class="btn header__buttons button-salvar">Salvar localStorage</button>
+      <button class="btn header__buttons button-excluir">Excluir localStorage</button>
+    </div>
+
+    <div class="header__horario" id="header__horario">
+      <div class="header__horario-hora" id="hora"></div>
+      <div class="header__horario-data" id="data"></div>
+    </div>
+  </header>
+
+
+
+
+  <main class="container">
+    <section id="inserir">
+
+      <form class="inputs__inserir">
+        <input type="text" id="description-atividade" class="inserir_description inserir__dados-atividade"
+          placeholder="Atividade">
+
+        <select name="inserir__dias-semanas" id="inserir__dias-semanas"
+          class="inserir__dias-semanas inserir__dados-atividade">
+          <option value="segunda">Segunda-Feira</option>
+          <option value="terca">Terça-Feira</option>
+          <option value="quarta">Quarta-Feira</option>
+          <option value="quinta">Quinta-Feira</option>
+          <option value="sexta">Sexta-Feira</option>
+          <option value="sabado">Sábado</option>
+          <option value="domingo">Domingo</option>
+        </select>
+
+        <select name="hora" id="hora-escolhida" class="inserir__hora inserir__dados-atividade">
+          <option value="meia-noite">00h</option>
+          <option value="uma-manha">01h</option>
+          <option value="duas-manha">02h</option>
+          <option value="tres-manha">03h</option>
+          <option value="quatro-manha">04h</option>
+          <option value="cinco-manha">05h</option>
+          <option value="seis-manha">06h</option>
+          <option value="sete-manha">07h</option>
+          <option value="oito-manha">08h</option>
+          <option value="nove-manha">09h</option>
+          <option value="dez-manha">10h</option>
+          <option value="onze-manha">11h</option>
+          <option value="doze-manha">12h</option>
+          <option value="uma-tarde">13h</option>
+          <option value="duas-tarde">14h</option>
+          <option value="tres-tarde">15h</option>
+          <option value="quatro-tarde">16h</option>
+          <option value="cinco-tarde">17h</option>
+          <option value="seis-tarde">18h</option>
+          <option value="sete-tarde">19h</option>
+          <option value="oito-tarde">20h</option>
+          <option value="nove-tarde">21h</option>
+          <option value="dez-tarde">22h</option>
+          <option value="onze-tarde">23h</option>
+          <option value="doze-tarde">24h</option>
+        </select>
+
+        <input type="text" name="minuto" id="minuto" class="inserir__dados-atividade inserir__hora inserir__minuto"
+          placeholder="00m">
+      </form>
+
+      <div class="buttons__inserir">
+        <button class="btn button-salvar btn__inserir" id="btn_adicionar-atividade">
+          <i class="fa-solid fa-plus icons"></i>
+          Adicionar Atividade
+        </button>
+        <button class="btn button-excluir btn__inserir">
+          <i class="fa-solid fa-minus icons"></i>
+          Excluir Todos
+        </button>
+      </div>
+
+    </section>
+
+    <section class="container__atividades">
+      <div class="atividades_horarios" id="horarios">
+        <div class="atividade__horario-titulo">
+          <p class="horario">Horarios</p>
+        </div>
+        <ul class="lista__atividade-horario" id="horarios">
+          <li class="atividade__horario-hora">
+            <p class="horario">10h00m</p>
+          </li>
+        </ul>
+      </div>
+      <div class="atividades_list">
+        <ul class="list__semanas">
+          <li><button class="dias_semana segunda">Segunda-Feira</button></li>
+          <li><button class="dias_semana terca">Terça-Feira</button></li>
+          <li><button class="dias_semana quarta">Quarta-Feira</button></li>
+          <li><button class="dias_semana quinta">Quinta-Feira</button></li>
+          <li><button class="dias_semana sexta">Sexta-Feira</button></li>
+          <li><button class="dias_semana sabado">Sábado</button></li>
+          <li><button class="dias_semana domingo">Domingo</button></li>
+        </ul>
+
+        <div class="atividades">
+          <div class="container_atividade">
+            <ul class="atividade_item">
+              <li class="atividade">
+                <p class="atividade__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab placeat
+                  .</p>
+                <button class="btn_apagar-atividade">Apagar</button>
+              </li>
+              <li class="atividade">
+                <p class="atividade__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab placeat
+                  .</p>
+                <button class="btn_apagar-atividade">Apagar</button>
+              </li>
+              <li class="atividade">
+                <p class="atividade__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab placeat
+                  .</p>
+                <button class="btn_apagar-atividade">Apagar</button>
+              </li>
+              <li class="atividade">
+                <p class="atividade__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab placeat
+                  .</p>
+                <button class="btn_apagar-atividade">Apagar</button>
+              </li>
+              <li class="atividade">
+                <p class="atividade__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab placeat
+                  .</p>
+                <button class="btn_apagar-atividade">Apagar</button>
+              </li>
+            </ul>
+            <ul class="atividade_item">
+              <li class="atividade">
+                <p class="atividade__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab placeat
+                  .</p>
+                <button class="btn_apagar-atividade">Apagar</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="./scripts/script.js"></script>
+  <script src="./scripts/data.js"></script>
+</body>
+
+</html>
