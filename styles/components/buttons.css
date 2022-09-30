@@ -1,0 +1,18 @@
+.btn {
+  border: none;
+  border-radius: 10px;
+  color: var(--branco);
+  font-size: 1.0625rem
+    /* 17px -> 1.0625rem */
+  ;
+}
+
+
+.button-salvar {
+  background-color: var(--color-button-salvar);
+  margin-right: .5rem;
+}
+
+.button-excluir {
+  background-color: var(--color-button-excluir);
+}
