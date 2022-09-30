@@ -1,0 +1,208 @@
+.container {
+  overflow-y: scroll;
+  margin: 0 auto;
+  width: 95%;
+  margin-top: 2rem;
+  height: 73vh;
+}
+
+.container::-webkit-scrollbar {
+  background-color: var(--branco);
+  width: 14px;
+  border-radius: 8px;
+}
+
+.container::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #DCDFE3;
+  border: 4px solid var(--branco);
+  width: 7px;
+}
+
+.container__atividades {
+  display: grid;
+  width: 100%;
+  height: 85%;
+  grid-template-columns: 85px calc(100% - 85px);
+  grid-template-rows: 100%;
+  grid-template-areas: 'horarios''atividades';
+}
+
+.atividades_horarios {
+  grid-area: horarios;
+}
+
+.atividade__horario-titulo {
+  width: 100%;
+  height: 75px;
+  font-family: var();
+  background-color: var(--branco);
+  box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.atividade__horario-hora {
+  margin-bottom: 10px;
+  width: 100%;
+  height: 85px;
+  filter: drop-shadow(0px 4px 24px rgba(168, 168, 168, 0.25));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--azul-claro);
+  color: var(--font-color-hora);
+  border-radius: 10px;
+}
+
+.horario {
+  font-size: 1.0625rem
+    /* 17px -> 1.0625rem */
+  ;
+  font-family: var(--font-poppins);
+}
+
+.atividades_list {
+  width: 100%;
+  height: 100%;
+  padding-left: 1rem;
+
+}
+
+.list__semanas {
+  width: 100%;
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 1rem;
+}
+
+.list__semanas li {
+  width: 100%;
+  max-width: 160px;
+}
+
+
+.dias_semana {
+  border: none;
+  box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+  border-radius: 9px 9px 0px 0px;
+  width: 100%;
+  height: 100%;
+  font-weight: var(--font-weight);
+  font-family: var(--font-poppins);
+  font-size: 1.0625rem;
+  color: var(--branco);
+  cursor: pointer;
+}
+
+.segunda {
+  background-color: var(--segunda);
+}
+
+.terca {
+  background-color: var(--terca);
+}
+
+.quarta {
+  background-color: var(--quarta);
+}
+
+.quinta {
+  background-color: var(--quinta);
+}
+
+.sexta {
+  background-color: var(--sexta);
+}
+
+.sabado {
+  background-color: var(--sabado);
+}
+
+.domingo {
+  background-color: var(--domingo);
+}
+
+.atividades {
+  transform: rotateX(180deg);
+  margin-top: 15px;
+  overflow-x: scroll;
+  margin-right: 5px;
+
+}
+
+.atividades::-webkit-scrollbar {
+  background-color: var(--branco);
+  height: 10px;
+  border-radius: 8px;
+}
+
+.atividades::-webkit-scrollbar-thumb {
+  background-color: #DCDFE3;
+  border-radius: 8px;
+  border: 1px solid var(--branco);
+
+}
+
+
+.container_atividade {
+  transform: rotateX(180deg);
+  padding-top: 1.5rem;
+
+}
+
+.atividade_item {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+
+.atividade {
+  width: 510px;
+  height: 85px;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  border-radius: 15px;
+  padding: .5rem;
+  filter: drop-shadow(0px 4px 24px rgba(168, 168, 168, 0.25));
+  background: linear-gradient(112.83deg, rgba(255, 255, 255, 0.3444) 0%, rgba(255, 255, 255, 0.336) 110.84%);
+  box-shadow: 0px 2px 5.5px rgba(0, 0, 0, 0.02);
+  border-left: 14px solid var(--azul-claro);
+  border-bottom: 1px solid var(--branco);
+  border-right: 1px solid var(--branco);
+  border-top: 1px solid var(--branco);
+}
+
+.listra {
+  position: absolute;
+  width: 2px;
+  width: 100%;
+  background-color: red;
+}
+
+.atividade__description {
+  font-size: 20px;
+  font-family: var(--font-poppins);
+  color: var(--font-color-description-atividade);
+}
+
+.btn_apagar-atividade {
+  height: 25px;
+  background-color: var(--color-button-apagar);
+  color: var(--branco);
+  font-weight: var(--font-weight);
+  font-family: var(--font-nunito);
+  border: none;
+  font-size: .875rem;
+  border-radius: 4px;
+  padding: .2rem;
+  cursor: pointer;
+}
