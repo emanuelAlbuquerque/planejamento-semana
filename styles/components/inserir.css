@@ -37,7 +37,8 @@
   font-family: (--font-nunito);
   font-size: 14px;
   border-radius: 10px;
-  padding: 0 5rem 0 1rem;
+  padding-left: 20px;
+  /* Ajustando o padding do select de dias da semana */
   width: 100%;
   max-width: 210px;
   max-height: 2.8125rem;
@@ -78,5 +79,19 @@
 
 .icons {
   margin-right: 10px;
+
+}
+
+@media screen and (max-width: 1300px) {
+
+  .inserir_description,
+  .inserir__dias-semanas,
+  .inserir__hora {
+    margin-right: 10px;
+  }
+
+  .btn {
+    font-size: 15px;
+  }
 
 }
