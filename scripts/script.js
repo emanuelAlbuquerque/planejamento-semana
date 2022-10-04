@@ -347,31 +347,38 @@ const excluirAtividades = () => {
   if(segunda){
     bdSegunda = []
     atividadeSegunda()
+    setLocalSegunda(bdSegunda)
     //Esvazia o array e atualiza a tela
   }
   if(terca){
     bdTerca = []
     atividadeTerca()
+    localStorage.removeItem(bdTerca);
   }
   if(quarta){
     bdQuarta = []
     atividadeQuarta()
+    localStorage.removeItem(bdQuarta);
   }
   if(quinta){
     bdQuinta = []
     atividadeQuinta()
+    localStorage.removeItem(bdQuinta);
   }
   if(sexta){
     bdSexta = []
     atividadeSexta()
+    localStorage.removeItem(bdSexta);
   }
   if(sabado){
     bdSabado = []
     atividadeSabado()
+    localStorage.removeItem(bdSabado);
   }
   if(domingo){
     bdDomingo = []
     atividadeDomingo()
+    localStorage.removeItem(bdDomingo);
   }
 }
 
