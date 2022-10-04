@@ -2,9 +2,8 @@
   border: none;
   border-radius: 10px;
   color: var(--branco);
-  font-size: 1.0625rem
-    /* 17px -> 1.0625rem */
-  ;
+  font-size: 1.0625rem;
+  cursor: pointer;
 }
 
 
