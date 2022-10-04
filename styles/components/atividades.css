@@ -34,8 +34,9 @@
 
 .atividade__horario-titulo {
   width: 100%;
-  height: 75px;
-  font-family: var();
+  height: 100%;
+  max-height: 75px;
+  font-family: var(--font-nunito);
   background-color: var(--branco);
   box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
   display: flex;
@@ -48,7 +49,8 @@
 .atividade__horario-hora {
   margin-bottom: 10px;
   width: 100%;
-  height: 85px;
+  height: 100%;
+  max-height: 85px;
   filter: drop-shadow(0px 4px 24px rgba(168, 168, 168, 0.25));
   display: flex;
   align-items: center;
@@ -58,9 +60,7 @@
 }
 
 .horario {
-  font-size: 1.0625rem
-    /* 17px -> 1.0625rem */
-  ;
+  font-size: 1.0625rem;
   font-family: var(--font-poppins);
 }
 
@@ -68,7 +68,6 @@
   width: 100%;
   height: 100%;
   padding-left: 1rem;
-
 }
 
 .list__semanas {
@@ -76,12 +75,12 @@
   height: 35px;
   display: flex;
   justify-content: space-between;
-  padding-right: 1rem;
+  padding-right: 2rem;
 }
 
-.list__semanas li {
+.list__semanas-item {
   width: 100%;
-  max-width: 140px;
+  height: 100%;
 }
 
 /* Mudando a largura e o tamanho da fonte dos dias da semana */
@@ -100,34 +99,42 @@
   ;
   color: var(--branco);
   cursor: pointer;
+
 }
 
-.segunda {
+#segunda {
   background-color: var(--segunda);
+  max-width: 140px;
 }
 
-.terca {
+#terca {
   background-color: var(--terca);
+  max-width: 140px;
 }
 
-.quarta {
+#quarta {
   background-color: var(--quarta);
+  max-width: 140px;
 }
 
-.quinta {
+#quinta {
   background-color: var(--quinta);
+  max-width: 140px;
 }
 
-.sexta {
+#sexta {
   background-color: var(--sexta);
+  max-width: 140px;
 }
 
-.sabado {
+#sabado {
   background-color: var(--sabado);
+  max-width: 140px;
 }
 
-.domingo {
+#domingo {
   background-color: var(--domingo);
+  max-width: 140px;
 }
 
 .atividades {
@@ -184,12 +191,6 @@
   border-top: 1px solid var(--branco);
 }
 
-.listra {
-  position: absolute;
-  width: 2px;
-  width: 100%;
-  background-color: red;
-}
 
 .atividade__description {
   font-size: 20px;
@@ -198,7 +199,7 @@
 }
 
 .btn_apagar-atividade {
-  height: 25px;
+  height: 1.5625rem;
   background-color: var(--color-button-apagar);
   color: var(--branco);
   font-weight: var(--font-weight);
@@ -208,4 +209,14 @@
   border-radius: 4px;
   padding: .2rem;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1256px) {
+  .list__semanas li {
+    max-width: 110px;
+  }
+
+  .dias_semana {
+    font-size: 13px;
+  }
 }
