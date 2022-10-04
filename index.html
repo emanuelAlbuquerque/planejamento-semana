@@ -24,8 +24,8 @@
     </div>
 
     <div class="header__buttons">
-      <button class="btn header__buttons button-salvar">Salvar localStorage</button>
-      <button class="btn header__buttons button-excluir">Excluir localStorage</button>
+      <button class="btn header__buttons button-salvar" id="salvar_local">Salvar localStorage</button>
+      <button class="btn header__buttons button-excluir" id="excluir_local">Excluir localStorage</button>
     </div>
 
     <div class="header__horario" id="header__horario">
@@ -56,6 +56,7 @@
         </select>
 
         <select name="hora" id="hora-escolhida" class="inserir__hora inserir__dados-atividade">
+          <option value="hora" disabled>Horas</option>
           <option value="meia-noite">00h</option>
           <option value="uma-manha">01h</option>
           <option value="duas-manha">02h</option>
@@ -92,7 +93,7 @@
           <i class="fa-solid fa-plus icons"></i>
           Adicionar Atividade
         </button>
-        <button class="btn button-excluir btn__inserir">
+        <button class="btn button-excluir btn__inserir" id="btn_excluir-todas-atividades">
           <i class="fa-solid fa-minus icons"></i>
           Excluir Todos
         </button>
@@ -105,59 +106,22 @@
         <div class="atividade__horario-titulo">
           <p class="horario">Horarios</p>
         </div>
-        <ul class="lista__atividade-horario" id="horarios">
-          <li class="atividade__horario-hora">
-            <p class="horario">10h00m</p>
-          </li>
-        </ul>
+        <!-- Local aonde será inserido as listas de atividades pelo Js -->
       </div>
       <div class="atividades_list">
         <ul class="list__semanas">
-          <li><button class="dias_semana segunda">Segunda-Feira</button></li>
-          <li><button class="dias_semana terca">Terça-Feira</button></li>
-          <li><button class="dias_semana quarta">Quarta-Feira</button></li>
-          <li><button class="dias_semana quinta">Quinta-Feira</button></li>
-          <li><button class="dias_semana sexta">Sexta-Feira</button></li>
-          <li><button class="dias_semana sabado">Sábado</button></li>
-          <li><button class="dias_semana domingo">Domingo</button></li>
+          <li class="list__semanas-item"><button class="dias_semana" id="segunda">Segunda-Feira</button></li>
+          <li class="list__semanas-item"><button class="dias_semana" id="terca">Terça-Feira</button></li>
+          <li class="list__semanas-item"><button class="dias_semana" id="quarta">Quarta-Feira</button></li>
+          <li class="list__semanas-item"><button class="dias_semana" id="quinta">Quinta-Feira</button></li>
+          <li class="list__semanas-item"><button class="dias_semana" id="sexta">Sexta-Feira</button></li>
+          <li class="list__semanas-item"><button class="dias_semana" id="sabado">Sábado</button></li>
+          <li class="list__semanas-item"><button class="dias_semana" id="domingo">Domingo</button></li>
         </ul>
 
         <div class="atividades">
-          <div class="container_atividade">
-            <ul class="atividade_item">
-              <li class="atividade">
-                <p class="atividade__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab placeat
-                  .</p>
-                <button class="btn_apagar-atividade">Apagar</button>
-              </li>
-              <li class="atividade">
-                <p class="atividade__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab placeat
-                  .</p>
-                <button class="btn_apagar-atividade">Apagar</button>
-              </li>
-              <li class="atividade">
-                <p class="atividade__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab placeat
-                  .</p>
-                <button class="btn_apagar-atividade">Apagar</button>
-              </li>
-              <li class="atividade">
-                <p class="atividade__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab placeat
-                  .</p>
-                <button class="btn_apagar-atividade">Apagar</button>
-              </li>
-              <li class="atividade">
-                <p class="atividade__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab placeat
-                  .</p>
-                <button class="btn_apagar-atividade">Apagar</button>
-              </li>
-            </ul>
-            <ul class="atividade_item">
-              <li class="atividade">
-                <p class="atividade__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab placeat
-                  .</p>
-                <button class="btn_apagar-atividade">Apagar</button>
-              </li>
-            </ul>
+          <div class="container_atividade" id="container_atividade">
+            <!-- Local aonde será inserido as listas de atividades pelo Js -->
           </div>
         </div>
       </div>
